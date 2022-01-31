@@ -3,11 +3,26 @@
     margin: 0;
 }
 
+:root {
+    --body-color: #000;
+    --text-color: #000;
+    --hover-color: #fff;
+}
+
 body{
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .light-theme:hover {
+    color: #000;
+  }
 
 header{
     max-width: 1440px;
@@ -33,12 +48,12 @@ header .logo .logo-nav nav ul{
     justify-content: space-between;
 }
 
-header .logo .logo-nav nav ul li{
+header .logo .logo-nav .menubox ul li{
     list-style-type: none;
     margin-right: 30px;
 }
 
-header .logo .logo-nav nav ul li a{
+header .logo .logo-nav .menubox ul li a{
     text-decoration: none;
     font-family: 'Inter';
     font-style: normal;
@@ -48,9 +63,94 @@ header .logo .logo-nav nav ul li a{
     transition: 0.5s;
 }
 
-header .logo .logo-nav nav ul li a:hover{
+header .logo .logo-nav .menubox ul li a:hover{
     color: #BDAE82;
 }
+
+.menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+   
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #BDAE82;
+    transition-duration: .25s;
+}
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+}
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #BDAE82;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    
+}
+
+.menu-item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .30s;
+}
+
+.menu-item:hover {
+    background-color: #BDAE82;
+}
+
+#menu-toggle{
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span{
+    transform: rotate(45deg);
+}
+  #menu-toggle:checked ~ .menu-btn > span::before{
+    top: 0;
+    transform: rotate(0);
+}
+  #menu-toggle:checked ~ .menu-btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+  #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    left: 0;
+}
+
 
 .dropdown-content{
     margin-right: 20px;
@@ -87,7 +187,7 @@ header .logo-descr h1{
 
 header .logo-descr p{
     width: 470px;
-    font-family: Inter;
+    font-family: 'Inter';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -220,11 +320,11 @@ main{
     top: -39px; 
 }
 
-.portfolio-btn{
+.portfolio-btns{
     margin-left: 272px;
 }
 
-.portfolio-btn a{
+.portfolio-btns button{
     display: inline-block;
     padding: 8px 79px 7px 79px;
     font-family: 'Inter';
@@ -239,12 +339,15 @@ main{
     margin-top: 60px;
     transition: 0.5s;
     margin-bottom: 60px;
+    background: #000;
 }
 
-.portfolio-btn a:hover{
+
+
+.portfolio-btns .active, button:hover{
     color: #000;
-    background: #BDAE82;
-}
+    background-color: #bdae82;
+  }
 
 .foto .portfolio-foto{
     display: grid;
@@ -517,3 +620,247 @@ footer .footer-nav{
 .footer-nav .footer-links{
     margin-right: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    header{
+        background-size: contain;
+    }
+
+    header .logo .logo-nav img {
+        margin-left: -464px;
+        
+    }
+
+    .menu-btn{
+        display: block;
+        top: 35px;
+        right: 30px;
+    }
+
+    .dropdown-content{
+        margin-right: 65px;
+        margin-top: -10px;
+    }
+
+    header .logo-descr h1{
+        margin-top: -180px;
+        font-size: 32px;
+        line-height: 64px;
+        margin-left: -20px;
+    }
+
+    header .logo-descr p{
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: -20px;
+        max-width: 390px;
+        height: 72px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    header .logo-descr a{
+        margin-left: -20px;
+        margin-top: 20px;
+    }
+
+    main{
+        background-size: contain;
+        margin-top: -458px;
+        height: 100%;
+    }
+
+    .skills h2{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .skills .hr1{
+        right: 169px;
+        width: 117px;
+        top: 123px;
+    }
+
+    .skills .hr2{
+        width: 116px;
+        top: -20px;
+        margin-left: 445px;
+    }
+
+    .hero .skills-block{
+        flex-wrap: wrap;
+    }
+
+    .skills-item:nth-child(2){
+        margin-bottom: 76px;
+    }
+
+    .portfolio h2{
+        font-size: 32px;
+        line-height: 80px;
+        margin-top: 80px;
+        padding-top: 0px;
+    }
+
+    .portfolio .hr1{
+        width: 70px;
+        left: -149px;
+        top: 122px;
+    }
+
+    .portfolio .hr2{
+        width: 69px;
+        right: 367px;
+        top: -41px;
+    }
+
+    .portfolio-btn{
+        display: inline-block;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 50px;
+        margin-left: 0px;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+
+    .portfolio-btn a{
+        margin: 0px;
+        width: 62px;
+    }
+
+    .portfolio-btn a:nth-child(1){
+        margin-left: 153px;
+    }
+
+    .portfolio-btn a:nth-child(3){
+        margin-left: 153px;
+    }
+
+    .foto{
+        margin-top: 60px;
+    }
+
+    .foto .portfolio-foto{
+       display: flex;
+       flex-wrap: wrap;
+       margin: 0px; 
+       margin-left: 159px;
+    }
+
+    .video{
+        padding-top: 0px;
+    }
+
+    .video h2{
+        font-size: 32px;
+        line-height: 80px;
+    }
+
+    .video .hr1{
+        width: 117px;
+        left: -171px;
+    }
+
+    .video .hr2{
+        width: 116px;
+        right: 353px;
+    }
+
+    .video-play img{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .play-hover{
+       max-width: 75px;
+       margin-top: 190px;
+       display: inline-block;
+       margin-right: 300px;
+    }
+
+    .price h2{
+        padding-top: 0px;
+        font-size: 32px;
+        line-height: 80px;
+    }
+
+    .price .hr1{
+        width: 121px;
+        top: 43px;
+        left: -144px;
+    }
+
+    .price .hr2{
+        width: 121px;
+        right: 357px;
+        top: -41px;
+    }
+
+    .price-block{
+        margin-left: 0px;
+        flex-wrap: wrap;
+        margin-left: 174px;  
+    }
+
+    .pricing:first-child{
+        margin-left: 0px;
+    }
+
+    .contacts{
+        background-size: cover;
+        height: 600px;
+        object-fit: cover;
+        margin-top: 80px;
+    }
+
+    .contacts-designer{
+        margin: 0px;
+       
+        margin-left: 159px;
+    }
+
+    .contacts-designer h3{
+        text-align: center;
+        font-size: 32px;
+        line-height: 64px
+    }
+
+    .contacts-designer form input:last-child{
+        margin-top: 38px;
+    }
+
+    footer{
+        height: 190px;
+    }
+
+    .footer-nav{
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-descr{
+        display: flex;
+        margin: 0 auto;
+        margin-left: 297px;
+        margin-top: -39px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .footer-learning a{
+        margin: 0px 268px;
+        margin-top: 16px;
+    }
+
+    .footer-links{
+        margin: 0px;
+        margin-left: 310px;
+        margin-top: 20px;
+    }
+   
+}
+

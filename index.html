@@ -14,16 +14,21 @@
     <header>
         <div class="logo">
             <div class="logo-nav">
+                <div class="burger-menu">
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class="menu-btn" for="menu-toggle">
+                      <span></span>
+                    </label>
+                        <ul class="menubox">
+                            <li><a class="menu-item" href="#skills">Skills</a></li>
+                            <li><a class="menu-item" href="#portfolio">Portfolio</a></li>
+                            <li><a class="menu-item" href="#video">Video</a></li>
+                            <li><a class="menu-item" href="#price">Price</a></li>
+                            <li><a class="menu-item" href="#contacts">Contacts</a></li>
+                        </ul>   
+                </div>
+                
                 <img src="image/logo.svg" alt="photo camera">
-                <nav>
-                    <ul>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#video">Video</a></li>
-                        <li><a href="#price">Price</a></li>
-                        <li><a href="#contacts">Contacts</a></li>
-                    </ul>
-                </nav>
                 <div class="dropdown-content">
                     <a href="#">en /</a>
                     <a href="#">ru</a>
@@ -37,97 +42,98 @@
             <a href="#">Hire me</a>    
         </div>
     </header>
-    <main>
-        <div class="skills">
-            <hr class="hr1">
-            <h2 id="skills">Skills</h2> 
-            <hr class="hr2">
+    <main class="light-theme">
+        <div class="skills light-theme">
+            <hr class="hr1" style="background-color: black;">
+            <h2 id="skills" style="color:#000">Skills</h2> 
+            <hr class="hr2"style="background-color: black">
         </div>
-        <div class="hero">
+        <div class="hero light-theme">
             <div class="skills-block">
                 <div class="skills-item">
                     <img src="image/camera.svg" alt="camera">
-                    <h3>Digital photography</h3>
-                    <p>High-quality photos in the studio and on the nature</p>
+                    <h3 style="color: #000;">Digital photography</h3>
+                    <p style="color: #000;">High-quality photos in the studio and on the nature</p>
                 </div>
           
                 <div class="skills-item">
                     <img src="image/video.svg" alt="video">
-                    <h3>Video shooting</h3>
-                    <p>Capture your moments so that they always stay with you</p>
+                    <h3 style="color: #000;">Video shooting</h3>
+                    <p style="color: #000;">Capture your moments so that they always stay with you</p>
                 </div>
                 <div class="skills-item">
                     <img src="image/image.svg" alt="image">
-                    <h3>Retouch</h3>
-                    <p>I strive to make photography surpass reality</p>
+                    <h3 style="color: #000;">Retouch</h3>
+                    <p style="color: #000;">I strive to make photography surpass reality</p>
                 </div>
                 <div class="skills-item">
                     <img src="image/mic.svg" alt="mic">
-                    <h3>Audio</h3>
-                    <p>Professional sounds recording for video, advertising, portfolio</p>
+                    <h3 style="color: #000;">Audio</h3>
+                    <p style="color: #000;">Professional sounds recording for video, advertising, portfolio</p>
                 </div>
             </div>    
         </div>
-        <div class="portfolio">
-            <hr class="hr1">
-            <h2 id="portfolio">Portfolio</h2> 
-            <hr class="hr2">
+        <div class="portfolio light-theme">
+            <hr class="hr1"style="background-color: black">
+            <h2 id="portfolio" style="color: #000;">Portfolio</h2> 
+            <hr class="hr2" style="background-color: black">
         
-            <div class="portfolio-item">
-                <div class="portfolio-btn">
-                    <a href="#">Winter</a>
-                    <a href="#">Spring</a>
-                    <a href="#">Summer</a>
-                    <a href="#">Autumn</a>
+            <div class="portfolio-item light-theme">
+                <div class="portfolio-btns" id="myDIV">
+                    <button class="portfolio-btn btn light-theme active" data-season="winter">Winter</button>
+                    <button class="portfolio-spring  btn" data-season="spring">Spring</button>
+                    <button class="active portfolio-summer btn" data-season="summer">Summer</button>
+                    <button class="active portfolio-autumn  btn" data-season="autumn">Autumn</button>
                 </div>
-                <div class="foto">
+                <div class="foto light-theme">
                     <div class="portfolio-foto">
-                        <img src="image/portfolio-img.png" alt="foto1" title="foto1">
-                        <img src="image/portfolio-img(1).png" alt="foto2" title="foto2">
-                        <img src="image/portfolio-img(2).png" alt="foto3" title="foto3">
-                        <img src="image/portfolio-img(3).png" alt="foto4" title="foto4">
-                        <img src="image/portfolio-img(4).png" alt="foto5" title="foto5">
-                        <img src="image/portfolio-img(5).png" alt="foto6" title="foto6">
+                        <img src="image/assets/img/autumn/1.jpg" alt="portfolio-image" title="foto1" class="portfolio-image portfolio-fotos my-portfolio portfolio-images">
+                        <img src="image/assets/img/autumn/2.jpg" alt="portfolio-image" title="foto2" class="portfolio-image portfolio-fotos my-portfolio portfolio-images">
+                        <img src="image/assets/img/autumn/3.jpg" alt="portfolio-image" title="foto3" class="portfolio-image portfolio-fotos my-portfolio portfolio-images">
+                        <img src="image/assets/img/autumn/4.jpg" alt="portfolio-image" title="foto4" class="portfolio-image portfolio-fotos my-portfolio portfolio-images">
+                        <img src="image/assets/img/autumn/5.jpg" alt="portfolio-image" title="foto5" class="portfolio-image portfolio-fotos my-portfolio portfolio-images">
+                        <img src="image/assets/img/autumn/6.jpg" alt="portfolio-image" title="foto6" class="portfolio-image portfolio-fotos my-portfolio portfolio-images">
                     </div>
+                    
                 </div>
             </div>    
         </div>
-        <div class="video">
-            <hr class="hr1">
-            <h2 id="video">Video</h2> 
-            <hr class="hr2">
+        <div class="video light-theme">
+            <hr class="hr1" style="background-color: black">
+            <h2 id="video" style="color: #000;">Video</h2> 
+            <hr class="hr2" style="background-color: black">
         
             <div class="video-play">
                 <img src="image/video-player.png" alt="video">
                 <img class="play-hover" src="image/Play_hover.png" alt="video">
             </div>
         </div>    
-        <div class="price">
-            <hr class="hr1">
-            <h2 id="price">Price</h2> 
-            <hr class="hr2">
-            <div class="price-block">
+        <div class="price light-theme">
+            <hr class="hr1" style="background-color: black">
+            <h2 id="price" style="color: #000;">Price</h2> 
+            <hr class="hr2" style="background-color: black">
+            <div class="price-block light-theme">
                 <div class="pricing">
-                    <h4>Standard</h4>
-                    <span>500 $</span>
-                    <p>One location<br>120 photos in color<br>12 photos in retouch<br>Readiness 2-3 weeks<br>Make up, visage<br></p>
-                    <a href="#">Order shooting</a>
+                    <h4 style="color: #000;">Standard</h4>
+                    <span style="color: #000;">500 $</span>
+                    <p style="color: #000;">One location<br>120 photos in color<br>12 photos in retouch<br>Readiness 2-3 weeks<br>Make up, visage<br></p>
+                    <a href="#" style="color: #fff;">Order shooting</a>
                 </div>
                 <div class="pricing">
-                    <h4>Premium</h4>
-                    <span>700 $ </span>
-                    <p>One or two locations<br>200 photos in color<br>20 photos in retouch<br>Readiness 1-2 weeks<br>Make up, visage<br></p>
-                    <a href="#">Order shooting</a>
+                    <h4 style="color: #000;">Premium</h4>
+                    <span style="color: #000;">700 $ </span>
+                    <p style="color: #000;">One or two locations<br>200 photos in color<br>20 photos in retouch<br>Readiness 1-2 weeks<br>Make up, visage<br></p>
+                    <a href="#" style="color: #fff;">Order shooting</a>
                 </div>
                 <div class="pricing">
-                    <h4>Gold</h4>
-                    <span>1000 $</span>
-                    <p>Three locations or more<br>300 photos in color<br>50 photos in retouch<br>Readiness 1 week<br>Make up, visage, hairstyle<br></p>
-                    <a href="#">Order shooting</a>
+                    <h4 style="color: #000;">Gold</h4>
+                    <span style="color: #000;">1000 $</span>
+                    <p style="color: #000;">Three locations or more<br>300 photos in color<br>50 photos in retouch<br>Readiness 1 week<br>Make up, visage, hairstyle<br></p>
+                    <a href="#" style="color: #fff;">Order shooting</a>
                 </div>
             </div>  
         </div>
-        <div class="contacts">
+        <div class="contacts light-theme">
             <div class="contacts-designer">
                 <h3 id="contacts">Contact me</h3>
                 <form>
@@ -157,6 +163,8 @@
             </div>
         </div>
     </footer>
-    
+    <script src="index.js"></script>
+    <script src="app.js"></script>
+    <script src="translate.js"></script>
 </body>
 </html>
